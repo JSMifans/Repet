@@ -73,6 +73,6 @@ export default {
 	left: 50%;
 	top: 50%;
 	transition: 0.3s;
-	background: red;
+	// background: red;
 }
 </style>

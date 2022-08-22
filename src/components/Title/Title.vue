@@ -1,14 +1,27 @@
 <template>
 	<div class="title-conponent">
 		<img class="titile-img" src="../../assets/images/title-top.png" alt="" />
-		<div class="text">海淀区概况</div>
-		<div class="us">HAIDIAN GAIKUANG</div>
+		<div class="text">{{ titleText }}</div>
+		<div class="us">{{ titleUs }}</div>
 		<img class="title-bottom" src="../../assets/images/title-bottom.png" alt="" />
 	</div>
 </template>
+<script setup>
+defineProps({
+	titleText: {
+		type: String,
+		default: '海淀区概况',
+	},
+	titleUs: {
+		type: String,
+		default: 'HAIDIAN GAIKUANG',
+	},
+})
+</script>
+
 <style lang="less">
 .title-conponent {
-	width: 1228px;
+	width: 100%;
 	height: 105px;
 	// border: 1px solid red;
 	background: url('../../assets/images/titlebg.png') no-repeat;
@@ -27,8 +40,9 @@
 	}
 	.us {
 		font-size: 42px;
-		margin-left: 220px;
 		color: rgba(55, 160, 255, 1);
+		position: absolute;
+		right: 100px;
 	}
 	.title-bottom {
 		position: absolute;

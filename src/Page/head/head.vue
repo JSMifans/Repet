@@ -29,12 +29,12 @@
 <script setup>
 import Day from 'dayjs'
 import { onMounted, ref } from 'vue'
-const moment = Day().format('YYYY - MM - DD')
+const moment = Day().format('YYYY-MM-DD')
 const timer = ref(null)
 
 onMounted(() => {
 	setInterval(() => {
-		timer.value = Day().format('HH : mm : ss')
+		timer.value = Day().format('HH:mm:ss')
 	}, 1000)
 })
 </script>

@@ -10,6 +10,11 @@
 	},
 	"dependencies": {
 		"dayjs": "^1.11.5",
+		"echarts": "^5.3.3",
+		"echarts-gl": "^2.0.9",
+		"install": "^0.13.0",
+		"video.js": "^7.20.2",
+		"videojs-contrib-hls": "^5.15.0",
 		"vue": "^3.2.37",
 		"vue-router": "^4.1.3"
 	},
