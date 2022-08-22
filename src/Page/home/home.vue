@@ -1,14 +1,34 @@
 <template>
-	<div id="cesiumContainer"></div>
+	<ScreenAdapterVue>
+		<div id="cesiumContainer">
+			<headVue></headVue>
+			<contentVue></contentVue>
+		</div>
+	</ScreenAdapterVue>
 </template>
 
 <script setup>
 import MViewer from '@/components/cesium/MViewer'
-import { onMounted } from 'vue'
+import ScreenAdapterVue from '../../components/ScreenAdapter/ScreenAdapter.vue'
+import headVue from '../head/head.vue'
+import contentVue from '../content/content.vue'
+import { onMounted, ref } from 'vue'
 
 onMounted(() => {
-	const viewer = new MViewer('cesiumContainer').init()
+	let viewer = new MViewer('cesiumContainer').init()
+	console.log(viewer)
 })
 </script>
 
-<style lang="less"></style>
+<style>
+#cesiumContainer {
+	z-index: 1;
+}
+.btn {
+	color: #fff;
+	position: absolute;
+	top: 10px;
+	z-index: 10;
+	cursor: pointer;
+}
+</style>
