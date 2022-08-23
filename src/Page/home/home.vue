@@ -17,7 +17,10 @@ import leftPageVue from '../leftPage/leftPage.vue'
 import rightPageVue from '../rightPage/rightPage.vue'
 import centerVue from '../center/center.vue'
 import { onMounted, ref } from 'vue'
-
+const isShow = ref(true)
+function toggle() {
+	isShow.value = !isShow.value
+}
 onMounted(() => {
 	// let viewer = new MViewer('cesiumContainer').init()
 	// console.log(viewer)
@@ -28,12 +31,5 @@ onMounted(() => {
 #cesiumContainer {
 	z-index: 1;
 	background-color: rgba(13, 83, 158, 0.6);
-}
-.btn {
-	color: #fff;
-	position: absolute;
-	top: 10px;
-	z-index: 10;
-	cursor: pointer;
 }
 </style>

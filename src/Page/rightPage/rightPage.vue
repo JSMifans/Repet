@@ -1,6 +1,6 @@
 <template>
 	<div id="rightPage">
-		<div class="opens"></div>
+		<div :class="[isBack ? 'opens' : 'isOpens']" class="opens" id="opens" @click="toggle"></div>
 		<div class="tabFlower">
 			<div
 				@click="clickTab(index)"
@@ -21,7 +21,7 @@
 				<div class="video-chart-contianer">
 					<div class="item" v-for="(item, index) in 6" :key="index">
 						<img class="img" src="../../assets/images/video-container.png" alt="" />
-						<div class="text">XXXX</div>
+						<div class="text ellipsis">颐和路288号</div>
 					</div>
 				</div>
 			</div>
@@ -70,8 +70,22 @@ import LineChart from '../../components/echarts/Line'
 import Bar from '../../components/echarts/Bar'
 const tabArray = ['北京市', '海淀区', '监控大楼']
 const tabIndex = ref(0)
+const isBack = ref(true)
 function clickTab(index) {
 	tabIndex.value = index
+}
+function toggle() {
+	let div = document.getElementById('rightPage')
+	let back = document.getElementById('opens')
+	if (isBack.value) {
+		div.style.right = '-2134px'
+		setTimeout(() => {
+			isBack.value = !isBack.value
+		}, 1000)
+	} else {
+		div.style.right = '0'
+		isBack.value = !isBack.value
+	}
 }
 onMounted(() => {
 	let bar3d = new Bar3D('bar-container').init()

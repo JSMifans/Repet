@@ -5,6 +5,8 @@
 	bottom: 0;
 	width: 2304px;
 	color: #fff;
+	z-index: 100;
+	transition: all 0.5s linear;
 	.back {
 		position: absolute;
 		width: 32px;
@@ -15,11 +17,23 @@
 		left: 1244px;
 		cursor: pointer;
 	}
+	.isBack {
+		position: fixed;
+		width: 32px;
+		height: 250px;
+		background: url('../../assets/images/close.png') no-repeat;
+		background-size: 100% 100%;
+		top: 900px;
+		left: 30px;
+		cursor: pointer;
+		z-index: 1000;
+	}
 }
 .map-echart {
 	height: 793px;
 	width: 1228px;
 	position: relative;
+	background-color: rgba(0, 24, 44, 0.5);
 	#map-container {
 		width: 795px;
 		height: 645px;
@@ -57,7 +71,7 @@
 .table-xuncha {
 	height: 1060px;
 	width: 1228px;
-	margin-top: 43px;
+	margin-top: 58px;
 }
 
 .search-container {

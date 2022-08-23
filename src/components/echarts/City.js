@@ -28,7 +28,7 @@ class CityMap {
 				roam: false,
 				itemStyle: {
 					normal: {
-						areaColor: '#207CD3',
+						areaColor: 'rgba(32, 124, 211, 0.5)',
 						borderColor: '#3B5077',
 					},
 					emphasis: {
@@ -39,6 +39,10 @@ class CityMap {
 			},
 		}
 		this.map.setOption(option)
+		window.addEventListener('resize', function () {
+			console.log('MapChart 改变大小')
+			this.map.resize()
+		})
 	}
 }
 

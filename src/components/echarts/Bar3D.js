@@ -223,7 +223,7 @@ class Bar3D {
 			tooltip: {
 				trigger: 'item',
 				formatter: function (params) {
-					debugger
+					// debugger
 				},
 			},
 			labelLine: {

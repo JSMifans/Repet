@@ -7,17 +7,8 @@ class Bar {
 	init() {
 		let bar = echarts.init(document.getElementById(this.el))
 		let option = {
-			title: {
-				left: 20,
-				top: 5,
-				text: 'xxxx',
-				textStyle: {
-					fontSize: 40,
-					color: '#fff',
-				},
-			},
 			legend: {
-				data: ['xxx', 'xxxx'],
+				data: ['高水位', '低水位'],
 				right: 0,
 				top: 10,
 				textStyle: {
@@ -63,12 +54,12 @@ class Bar {
 			},
 			series: [
 				{
-					name: 'xxx',
+					name: '高水位',
 					type: 'bar',
 					data: [12.0, 41.9, 27.0, 23.2, 25.6],
 				},
 				{
-					name: 'xxxx',
+					name: '低水位',
 					type: 'bar',
 					data: [12.6, 51.9, 92.0, 26.4, 28.7],
 				},
